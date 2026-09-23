@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Hover Effect</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        /* Image Container */
+        .image-container {
+            width: 350px;
+            height: 250px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Image */
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        /* Zoom Effect on Hover */
+        .image-container:hover img {
+            transform: scale(1.2);
+        }
+
+        /* Overlay */
+        .overlay {
+            position: relative;
+            margin: 40px auto;
+            width: 350px;
+            height: 250px;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+
+        .overlay img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 25px;
+
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        /* Show overlay on hover */
+        .overlay:hover .text {
+            opacity: 1;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 500px) {
+            .image-container,
+            .overlay {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Image Hover Effects</h1>
+
+    <!-- Zoom Image Effect -->
+    <div class="image-container">
+        <img src="https://picsum.photos/id/1015/600/400"
+             alt="Mountain">
+    </div>
+
+    <!-- Image Overlay Effect -->
+    <div class="overlay">
+
+        <img src="https://picsum.photos/id/1035/600/400"
+             alt="Nature">
+
+        <div class="text">
+            Explore Nature
+        </div>
+
+    </div>
+
+</body>
+</html>

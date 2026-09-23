@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Filters</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .gallery {
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            transition: filter 0.4s ease;
+        }
+
+        .card h2 {
+            color: #0077b6;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            color: #555;
+        }
+
+        /* Blur Filter */
+        .blur img {
+            filter: blur(5px);
+        }
+
+        /* Grayscale Filter */
+        .grayscale img {
+            filter: grayscale(100%);
+        }
+
+        /* Brightness Filter */
+        .brightness img {
+            filter: brightness(150%);
+        }
+
+        /* Contrast Filter */
+        .contrast img {
+            filter: contrast(200%);
+        }
+
+        /* Hover to remove the filter */
+        .card img:hover {
+            filter: none;
+        }
+
+        @media screen and (max-width: 600px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Filter Effects</h1>
+
+    <div class="gallery">
+
+        <!-- Blur -->
+        <div class="card blur">
+            <img src="https://picsum.photos/id/1015/600/400"
+                 alt="Blur Effect">
+
+            <h2>Blur</h2>
+            <p>Uses filter: blur(5px)</p>
+        </div>
+
+        <!-- Grayscale -->
+        <div class="card grayscale">
+            <img src="https://picsum.photos/id/1025/600/400"
+                 alt="Grayscale Effect">
+
+            <h2>Grayscale</h2>
+            <p>Uses filter: grayscale(100%)</p>
+        </div>
+
+        <!-- Brightness -->
+        <div class="card brightness">
+            <img src="https://picsum.photos/id/1035/600/400"
+                 alt="Brightness Effect">
+
+            <h2>Brightness</h2>
+            <p>Uses filter: brightness(150%)</p>
+        </div>
+
+        <!-- Contrast -->
+        <div class="card contrast">
+            <img src="https://picsum.photos/id/1043/600/400"
+                 alt="Contrast Effect">
+
+            <h2>Contrast</h2>
+            <p>Uses filter: contrast(200%)</p>
+        </div>
+
+    </div>
+
+</body>
+</html>

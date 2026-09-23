@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Template Areas</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Grid Container */
+        .container {
+            min-height: 100vh;
+            display: grid;
+
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 80px 1fr 60px;
+
+            grid-template-areas:
+                "header header"
+                "sidebar main"
+                "footer footer";
+        }
+
+        /* Header */
+        header {
+            grid-area: header;
+            background-color: #1d3557;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Sidebar */
+        aside {
+            grid-area: sidebar;
+            background-color: #457b9d;
+            padding: 25px;
+        }
+
+        aside h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        aside a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            margin-bottom: 8px;
+            background-color: #1d3557;
+            border-radius: 5px;
+        }
+
+        aside a:hover {
+            background-color: #e63946;
+        }
+
+        /* Main Content */
+        main {
+            grid-area: main;
+            padding: 30px;
+        }
+
+        main h2 {
+            color: #1d3557;
+            margin-bottom: 15px;
+        }
+
+        main p {
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .cards {
+            display: flex;
+            gap: 20px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: white;
+            padding: 25px;
+            flex: 1;
+            min-width: 180px;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            color: #e63946;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            grid-area: footer;
+            background-color: #1d3557;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Responsive Layout */
+        @media screen and (max-width: 700px) {
+
+            .container {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto 1fr 60px;
+
+                grid-template-areas:
+                    "header"
+                    "sidebar"
+                    "main"
+                    "footer";
+            }
+
+            aside {
+                text-align: center;
+            }
+
+            aside a {
+                display: inline-block;
+                margin: 5px;
+            }
+
+            .cards {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <h1>My Website</h1>
+        </header>
+
+        <!-- Sidebar -->
+        <aside>
+            <h2>Menu</h2>
+
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </aside>
+
+        <!-- Main Content -->
+        <main>
+
+            <h2>Welcome</h2>
+
+            <p>
+                This webpage demonstrates the use of
+                CSS Grid Template Areas to create a
+                structured webpage layout.
+            </p>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>HTML</h3>
+                    <p>
+                        HTML is used to create the structure
+                        of a webpage.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>CSS</h3>
+                    <p>
+                        CSS is used to style and design
+                        webpages.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Grid</h3>
+                    <p>
+                        CSS Grid is useful for creating
+                        two-dimensional layouts.
+                    </p>
+                </div>
+
+            </div>
+
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 My Website</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

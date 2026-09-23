@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #333;
+            animation: headingAnimation 2s ease-in-out infinite alternate;
+        }
+
+        /* Heading Animation */
+        @keyframes headingAnimation {
+            from {
+                color: blue;
+                transform: scale(1);
+            }
+
+            to {
+                color: red;
+                transform: scale(1.2);
+            }
+        }
+
+        /* Animated Box */
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #0077b6;
+            margin: 80px auto;
+            border-radius: 10px;
+
+            animation: moveBox 3s ease-in-out infinite;
+        }
+
+        /* Box Animation */
+        @keyframes moveBox {
+            0% {
+                transform: translateX(-200px);
+                background-color: blue;
+            }
+
+            50% {
+                transform: translateX(200px);
+                background-color: green;
+                border-radius: 50%;
+            }
+
+            100% {
+                transform: translateX(-200px);
+                background-color: red;
+            }
+        }
+
+        /* Button Animation */
+        .button {
+            display: inline-block;
+            background-color: purple;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+
+            animation: buttonAnimation 1.5s infinite alternate;
+        }
+
+        @keyframes buttonAnimation {
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(-15px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Animation Demo</h1>
+
+    <p>The heading changes color and size.</p>
+
+    <div class="box"></div>
+
+    <div class="button">
+        Animated Button
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transitions</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            color: #1d3557;
+            margin-bottom: 15px;
+        }
+
+        .description {
+            color: #666;
+            margin-bottom: 35px;
+        }
+
+        /* Button Transition */
+        .btn {
+            display: inline-block;
+            padding: 14px 30px;
+            background-color: #1d3557;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+
+            /* Transition */
+            transition: background-color 0.5s,
+                        transform 0.5s;
+        }
+
+        .btn:hover {
+            background-color: #e63946;
+            transform: scale(1.1);
+        }
+
+        /* Card Transition */
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+
+        .card {
+            width: 250px;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+
+            transition: transform 0.4s,
+                        box-shadow 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+        }
+
+        .card h2 {
+            color: #457b9d;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* Box Transition */
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #2a9d8f;
+            margin: 50px auto;
+
+            transition: width 1s,
+                        height 1s,
+                        background-color 1s,
+                        border-radius 1s;
+        }
+
+        .box:hover {
+            width: 180px;
+            height: 180px;
+            background-color: #f4a261;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Transitions</h1>
+
+    <p class="description">
+        Move your mouse over the elements to see the transitions.
+    </p>
+
+    <!-- Button -->
+    <a href="#" class="btn">
+        Hover Over Me
+    </a>
+
+    <!-- Cards -->
+    <div class="container">
+
+        <div class="card">
+            <h2>Card 1</h2>
+            <p>
+                Hover over this card to see its
+                movement and shadow transition.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Card 2</h2>
+            <p>
+                CSS transitions make changes happen
+                smoothly instead of instantly.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Card 3</h2>
+            <p>
+                You can apply transitions to colors,
+                sizes, shadows, and transforms.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Animated Box -->
+    <div class="box"></div>
+
+</body>
+</html>

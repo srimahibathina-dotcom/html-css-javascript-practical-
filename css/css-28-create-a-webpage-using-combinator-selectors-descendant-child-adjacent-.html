@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Combinator Selectors</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 30px;
+        }
+
+        .container {
+            background-color: white;
+            max-width: 700px;
+            margin: auto;
+            padding: 25px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        /* 1. Descendant Selector (space)
+           Selects all <p> elements inside .box */
+        .box p {
+            color: blue;
+            background-color: #e6f2ff;
+            padding: 10px;
+        }
+
+        /* 2. Child Selector (>)
+           Selects only direct <p> children of .parent */
+        .parent > p {
+            color: green;
+            font-weight: bold;
+        }
+
+        /* 3. Adjacent Sibling Selector (+)
+           Selects the first <p> immediately after h2 */
+        h2 + p {
+            color: red;
+            font-size: 18px;
+        }
+
+        /* 4. General Sibling Selector (~)
+           Selects all <p> elements after h3
+           that share the same parent */
+        h3 ~ p {
+            color: purple;
+            border-left: 4px solid purple;
+            padding-left: 10px;
+        }
+
+        .section {
+            margin-top: 25px;
+            padding: 15px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>CSS Combinator Selectors</h1>
+
+        <!-- Descendant Selector -->
+        <div class="section box">
+            <h2>Descendant Selector</h2>
+
+            <p>
+                This paragraph is a descendant of the .box element.
+            </p>
+
+            <div>
+                <p>
+                    This paragraph is also a descendant of .box.
+                </p>
+            </div>
+        </div>
+
+        <!-- Child Selector -->
+        <div class="section parent">
+            <h2>Child Selector</h2>
+
+            <p>
+                This is a direct child of .parent.
+            </p>
+
+            <div>
+                <p>
+                    This is NOT a direct child of .parent.
+                </p>
+            </div>
+        </div>
+
+        <!-- Adjacent Sibling Selector -->
+        <div class="section">
+            <h2>Adjacent Sibling</h2>
+
+            <p>
+                This paragraph immediately follows h2, so it is selected.
+            </p>
+
+            <p>
+                This paragraph does not immediately follow h2.
+            </p>
+        </div>
+
+        <!-- General Sibling Selector -->
+        <div class="section">
+            <h3>General Sibling Selector</h3>
+
+            <p>
+                This paragraph is a sibling after h3.
+            </p>
+
+            <p>
+                This paragraph is also a sibling after h3.
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>

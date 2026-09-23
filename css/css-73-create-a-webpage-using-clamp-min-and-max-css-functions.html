@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Functions</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f9;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #1d3557;
+            color: white;
+            text-align: center;
+
+            /* max() used for padding */
+            padding: max(25px, 5vw);
+        }
+
+        header h1 {
+            /* clamp() for responsive font size */
+            font-size: clamp(2rem, 6vw, 4rem);
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: clamp(1rem, 2.5vw, 1.4rem);
+        }
+
+        /* Main Content */
+        main {
+            /* min() limits the maximum width */
+            width: min(90%, 1000px);
+            margin: 40px auto;
+        }
+
+        /* Card */
+        .card {
+            background-color: white;
+
+            /* min() for responsive padding */
+            padding: min(6vw, 50px);
+
+            border-radius: 12px;
+
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+
+            text-align: center;
+        }
+
+        .card h2 {
+            color: #1d3557;
+
+            /* clamp() for responsive heading */
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+
+            margin-bottom: 20px;
+        }
+
+        .card p {
+            /* clamp() for responsive paragraph */
+            font-size: clamp(1rem, 2vw, 1.2rem);
+
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        /* Responsive Box */
+        .box {
+            /*
+                max() ensures the width is at least 250px
+                or 50% of the parent.
+            */
+            width: max(250px, 50%);
+
+            height: 150px;
+
+            background-color: #2a9d8f;
+            color: white;
+
+            margin: 30px auto;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 10px;
+
+            font-size: clamp(1rem, 3vw, 1.5rem);
+        }
+
+        /* Button */
+        .btn {
+            display: inline-block;
+
+            padding: max(10px, 1.5vw) max(20px, 3vw);
+
+            background-color: #e63946;
+            color: white;
+
+            text-decoration: none;
+            border-radius: 5px;
+
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+        }
+
+        .btn:hover {
+            background-color: #c1121f;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1d3557;
+            color: white;
+            text-align: center;
+
+            padding: max(20px, 3vw);
+        }
+
+        footer p {
+            font-size: clamp(0.8rem, 1.5vw, 1rem);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <h1>CSS Functions</h1>
+
+        <p>
+            Demonstrating clamp(), min(), and max()
+        </p>
+
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <div class="card">
+
+            <h2>Responsive Design</h2>
+
+            <p>
+                CSS functions such as clamp(), min(), and max()
+                make it easier to create responsive layouts
+                without using many media queries.
+            </p>
+
+            <!-- max() Example -->
+            <div class="box">
+                max() Example
+            </div>
+
+            <a href="#" class="btn">
+                Learn More
+            </a>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            &copy; 2026 CSS Functions Example
+        </p>
+
+    </footer>
+
+</body>
+</html>

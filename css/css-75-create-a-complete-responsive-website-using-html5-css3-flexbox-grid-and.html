@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Modern Responsive Website</title>
+
+    <style>
+        /* =========================
+           GLOBAL STYLES
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f7fa;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #1d3557;
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #e63946;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #c1121f;
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           HEADER - FLEXBOX
+        ========================== */
+
+        header {
+            background-color: #1d3557;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            min-height: 70px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #fca311;
+        }
+
+        nav ul {
+            list-style: none;
+
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #fca311;
+        }
+
+
+        /* =========================
+           HERO SECTION
+        ========================== */
+
+        .hero {
+            min-height: 85vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+            color: white;
+
+            background:
+                linear-gradient(
+                    rgba(29, 53, 87, 0.8),
+                    rgba(42, 157, 143, 0.8)
+                ),
+                url("https://picsum.photos/id/1018/1600/900");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.2rem, 6vw, 4.5rem);
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+
+        /* =========================
+           ABOUT SECTION - FLEXBOX
+        ========================== */
+
+        .about {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .about-container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-image {
+            flex: 1;
+        }
+
+        .about-image img {
+            border-radius: 12px;
+        }
+
+        .about-content {
+            flex: 1;
+        }
+
+        .about-content h2 {
+            color: #1d3557;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .about-content p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+
+        /* =========================
+           SERVICES - CSS GRID
+        ========================== */
+
+        .services {
+            padding: 80px 0;
+            background-color: #f5f7fa;
+        }
+
+        .service-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .service-card {
+            background-color: white;
+            padding: 30px;
+
+            text-align: center;
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 4px 12px rgba(0, 0, 0, 0.1);
+
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow:
+                0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            color: #1d3557;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: #666;
+        }
+
+
+        /* =========================
+           PROJECTS - CSS GRID
+        ========================== */
+
+        .projects {
+            padding: 80px 0;
+            background-color: white;
+        }
+
+        .project-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .project-card {
+            background-color: #f5f7fa;
+            border-radius: 10px;
+            overflow: hidden;
+
+            box-shadow:
+                0 3px 10px rgba(0, 0, 0, 0.1);
+
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: scale(1.03);
+        }
+
+        .project-card img {
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-content h3 {
+            color: #1d3557;
+            margin-bottom: 10px;
+        }
+
+        .project-content p {
+            color: #666;
+        }
+
+
+        /* =========================
+           FEATURES - GRID
+        ========================== */
+
+        .features {
+            padding: 80px 0;
+            background-color: #264653;
+            color: white;
+        }
+
+        .feature-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 25px;
+        }
+
+        .feature h3 {
+            color: #fca311;
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================== */
+
+        .contact {
+            padding: 80px 0;
+            background-color: #f5f7fa;
+        }
+
+        .contact-container {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 40px;
+        }
+
+        .contact-info h3 {
+            color: #1d3557;
+            margin-bottom: 15px;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+
+            box-shadow:
+                0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+
+            border: 1px solid #ccc;
+            border-radius: 5px;
+
+            font-family: inherit;
+        }
+
+        textarea {
+            height: 130px;
+            resize: vertical;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #2a9d8f;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background-color: #1d3557;
+            color: white;
+            padding: 30px 0;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            color: white;
+        }
+
+        .social-links a:hover {
+            color: #fca311;
+        }
+
+
+        /* =========================
+           TABLET
+        ========================== */
+
+        @media screen and (max-width: 900px) {
+
+            .service-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .project-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .feature-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .about-container {
+                gap: 30px;
+            }
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media screen and (max-width: 600px) {
+
+            .header-container {
+                flex-direction: column;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 8px;
+                text-align: center;
+            }
+
+            .hero {
+                min-height: 75vh;
+                padding: 40px 20px;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .about-container {
+                flex-direction: column;
+            }
+
+            .about-image,
+            .about-content {
+                width: 100%;
+            }
+
+            .service-grid,
+            .project-grid,
+            .feature-grid,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .service-card,
+            .project-card {
+                width: 100%;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+
+            .section-title {
+                font-size: 1.7rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header>
+
+        <div class="container header-container">
+
+            <div class="logo">
+                WebWorld
+            </div>
+
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <h1>Build Something Amazing</h1>
+
+                <p>
+                    We create modern, responsive and
+                    user-friendly websites for everyone.
+                </p>
+
+                <a href="#services" class="btn">
+                    Explore Services
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ABOUT
+        ========================== -->
+
+        <section class="about" id="about">
+
+            <div class="container">
+
+                <h2 class="section-title">
+                    About Us
+                </h2>
+
+                <div class="about-container">
+
+                    <div class="about-image">
+
+                        <img
+                            src="https://picsum.photos/id/3/700/500"
+                            alt="Team working"
+                        >
+
+                    </div>
+
+                    <div class="about-content">
+
+                        <h2>
+                            We Create Modern Websites
+                        </h2>
+
+                        <p>
+                            Our goal is to create websites that
+                            are attractive, fast, accessible and
+                            responsive on all devices.
+                        </p>
+
+                        <p>
+                            We use modern HTML5 and CSS3 techniques,
+                            including Flexbox, CSS Grid and responsive
+                            media queries.
+                        </p>
+
+                        <a href="#contact" class="btn">
+                            Contact Us
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SERVICES
+        ========================== -->
+
+        <section class="services" id="services">
+
+            <div class="container">
+
+                <h2 class="section-title">
+                    Our Services
+                </h2>
+
+                <div class="service-grid">
+
+                    <article class="service-card">
+
+                        <div class="service-icon">💻</div>
+
+                        <h3>Web Design</h3>
+
+                        <p>
+                            Beautiful and user-friendly
+                            website designs.
+                        </p>
+
+                    </article>
+
+                    <article class="service-card">
+
+                        <div class="service-icon">📱</div>
+
+                        <h3>Responsive Design</h3>
+
+                        <p>
+                            Websites that work perfectly
+                            on mobile, tablet and desktop.
+                        </p>
+
+                    </article>
+
+                    <article class="service-card">
+
+                        <div class="service-icon">⚡</div>
+
+                        <h3>Performance</h3>
+
+                        <p>
+                            Fast and optimized websites
+                            for a better user experience.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PROJECTS
+        ========================== -->
+
+        <section class="projects" id="projects">
+
+            <div class="container">
+
+                <h2 class="section-title">
+                    Our Projects
+                </h2>
+
+                <div class="project-grid">
+
+                    <article class="project-card">
+
+                        <img
+                            src="https://picsum.photos/id/60/600/400"
+                            alt="Portfolio website"
+                        >
+
+                        <div class="project-content">
+
+                            <h3>Portfolio Website</h3>
+
+                            <p>
+                                A clean and responsive
+                                personal portfolio website.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                    <article class="project-card">
+
+                        <img
+                            src="https://picsum.photos/id/48/600/400"
+                            alt="Business website"
+                        >
+
+                        <div class="project-content">
+
+                            <h3>Business Website</h3>
+
+                            <p>
+                                A professional website designed
+                                for a modern business.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                    <article class="project-card">
+
+                        <img
+                            src="https://picsum.photos/id/96/600/400"
+                            alt="Shopping website"
+                        >
+
+                        <div class="project-content">
+
+                            <h3>Shopping Website</h3>
+
+                            <p>
+                                A responsive online shopping
+                                interface with product cards.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FEATURES
+        ========================== -->
+
+        <section class="features">
+
+            <div class="container">
+
+                <div class="feature-grid">
+
+                    <div class="feature">
+                        <h3>100+</h3>
+                        <p>Projects</p>
+                    </div>
+
+                    <div class="feature">
+                        <h3>50+</h3>
+                        <p>Clients</p>
+                    </div>
+
+                    <div class="feature">
+                        <h3>5+</h3>
+                        <p>Years Experience</p>
+                    </div>
+
+                    <div class="feature">
+                        <h3>24/7</h3>
+                        <p>Support</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTACT
+        ========================== -->
+
+        <section class="contact" id="contact">
+
+            <div class="container">
+
+                <h2 class="section-title">
+                    Contact Us
+                </h2>
+
+                <div class="contact-container">
+
+                    <div class="contact-info">
+
+                        <h3>
+                            Get In Touch
+                        </h3>
+
+                        <p>
+                            Have a project idea? Send us
+                            a message.
+                        </p>
+
+                        <p>
+                            📧 Email:
+                            example@email.com
+                        </p>
+
+                        <p>
+                            📞 Phone:
+                            +91 98765 43210
+                        </p>
+
+                        <p>
+                            📍 Location:
+                            Chennai, India
+                        </p>
+
+                    </div>
+
+                    <form>
+
+                        <input
+                            type="text"
+                            placeholder="Your Name"
+                            required
+                        >
+
+                        <input
+                            type="email"
+                            placeholder="Your Email"
+                            required
+                        >
+
+                        <input
+                            type="text"
+                            placeholder="Subject"
+                        >
+
+                        <textarea
+                            placeholder="Your Message"
+                        ></textarea>
+
+                        <button
+                            type="submit"
+                            class="btn"
+                        >
+                            Send Message
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="container footer-container">
+
+            <p>
+                &copy; 2026 WebWorld. All Rights Reserved.
+            </p>
+
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">LinkedIn</a>
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>

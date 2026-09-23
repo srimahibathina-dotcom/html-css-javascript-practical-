@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Inheritance and Specificity</title>
+
+    <style>
+        /* Universal selector */
+        * {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Element selector */
+        p {
+            color: blue;
+            font-size: 18px;
+        }
+
+        /* Class selector - higher specificity than element selector */
+        .text {
+            color: green;
+        }
+
+        /* ID selector - higher specificity than class selector */
+        #special {
+            color: red;
+        }
+
+        /* Demonstrating inheritance */
+        .parent {
+            color: purple;
+            font-size: 20px;
+            border: 2px solid purple;
+            padding: 20px;
+        }
+
+        /* This paragraph inherits color and font-size
+           from the parent */
+        .parent p {
+            color: inherit;
+            font-size: inherit;
+        }
+
+        /* Class selector */
+        .important {
+            color: orange;
+        }
+
+        /* ID selector has higher specificity than class */
+        #highest {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Inheritance and Specificity</h1>
+
+    <!-- Specificity Example -->
+    <section>
+        <h2>Specificity Example</h2>
+
+        <p>This paragraph uses the element selector.</p>
+
+        <p class="text">
+            This paragraph uses a class selector, so it becomes green.
+        </p>
+
+        <p id="special" class="text">
+            This paragraph has both ID and class selectors.
+            The ID selector has higher specificity, so it becomes red.
+        </p>
+    </section>
+
+    <!-- Inheritance Example -->
+    <section class="parent">
+        <h2>Inheritance Example</h2>
+
+        <p>
+            This paragraph inherits the color and font size from
+            its parent element.
+        </p>
+    </section>
+
+    <!-- Specificity Comparison -->
+    <section>
+        <h2>Specificity Comparison</h2>
+
+        <p class="important" id="highest">
+            This text has both a class and an ID.
+            The ID selector has higher specificity, so the text is red.
+        </p>
+    </section>
+
+</body>
+</html>

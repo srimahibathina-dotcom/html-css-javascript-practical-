@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Responsive Typography</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f9;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #1d3557;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        /* Responsive Heading */
+        header h1 {
+            font-size: clamp(2rem, 6vw, 4rem);
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: clamp(1rem, 2.5vw, 1.4rem);
+        }
+
+        /* Main Content */
+        main {
+            width: min(90%, 1000px);
+            margin: auto;
+            padding: clamp(30px, 6vw, 70px) 0;
+        }
+
+        section {
+            background-color: white;
+            padding: clamp(20px, 4vw, 40px);
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive Section Heading */
+        h2 {
+            color: #1d3557;
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            margin-bottom: 15px;
+        }
+
+        /* Responsive Paragraph */
+        p {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            line-height: 1.7;
+        }
+
+        /* Responsive Quote */
+        .quote {
+            margin-top: 20px;
+            padding: 20px;
+            border-left: 5px solid #e63946;
+            background-color: #f8f9fa;
+
+            font-size: clamp(1.1rem, 3vw, 1.6rem);
+            font-style: italic;
+        }
+
+        /* Button */
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+
+            background-color: #457b9d;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+        }
+
+        .btn:hover {
+            background-color: #1d3557;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1d3557;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer p {
+            font-size: clamp(0.8rem, 1.5vw, 1rem);
+        }
+
+        /* Small Screen */
+        @media screen and (max-width: 600px) {
+            header {
+                padding: 30px 15px;
+            }
+
+            main {
+                width: 92%;
+            }
+
+            section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Responsive Typography</h1>
+        <p>Text that automatically adapts to different screen sizes</p>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <section>
+            <h2>About Responsive Typography</h2>
+
+            <p>
+                Responsive typography allows text to automatically
+                adjust its size according to the screen width.
+                This makes websites easier to read on mobile phones,
+                tablets, and desktop computers.
+            </p>
+
+            <div class="quote">
+                "Good typography makes content easier to read and understand."
+            </div>
+        </section>
+
+        <section>
+            <h2>Using CSS clamp()</h2>
+
+            <p>
+                The CSS clamp() function allows us to define a minimum,
+                preferred, and maximum font size. As the screen size
+                changes, the text smoothly adjusts between these values.
+            </p>
+
+            <a href="#" class="btn">
+                Learn More
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Responsive Typography</p>
+    </footer>
+
+</body>
+</html>

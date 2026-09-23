@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Sidebar</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Fixed Sidebar */
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 220px;
+            height: 100vh;
+            background-color: #1d3557;
+            color: white;
+            padding: 25px 15px;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            margin-bottom: 8px;
+            border-radius: 5px;
+        }
+
+        .sidebar a:hover {
+            background-color: #457b9d;
+        }
+
+        /* Main Content */
+        .content {
+            margin-left: 220px;
+            padding: 30px;
+        }
+
+        .content h1 {
+            color: #1d3557;
+            margin-bottom: 20px;
+        }
+
+        .content section {
+            background-color: white;
+            padding: 30px;
+            margin-bottom: 25px;
+            min-height: 250px;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .content h2 {
+            color: #457b9d;
+            margin-bottom: 15px;
+        }
+
+        .content p {
+            color: #555;
+            line-height: 1.7;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 600px) {
+            .sidebar {
+                width: 160px;
+            }
+
+            .content {
+                margin-left: 160px;
+                padding: 20px;
+            }
+
+            .sidebar a {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Fixed Sidebar -->
+    <aside class="sidebar">
+        <h2>Menu</h2>
+
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+
+        <h1>Fixed Sidebar Example</h1>
+
+        <section id="home">
+            <h2>Home</h2>
+            <p>
+                Welcome to the website. Scroll down the page to see
+                that the sidebar remains fixed on the left side.
+            </p>
+        </section>
+
+        <section id="about">
+            <h2>About</h2>
+            <p>
+                This section contains information about the website.
+                The sidebar stays in the same position while the
+                main content scrolls.
+            </p>
+        </section>
+
+        <section id="services">
+            <h2>Services</h2>
+            <p>
+                We provide web design, web development, and
+                responsive website development services.
+            </p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>
+                Email: example@email.com
+            </p>
+            <p>
+                Phone: +91 98765 43210
+            </p>
+        </section>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+
+    <style>
+
+        /* 1. Universal Selector */
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* 2. Element Selector */
+        body {
+            background-color: #f2f2f2;
+            margin: 30px;
+        }
+
+        /* 3. ID Selector */
+        #main-heading {
+            color: blue;
+            text-align: center;
+        }
+
+        /* 4. Class Selector */
+        .highlight {
+            color: green;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* 5. Group Selector */
+        h2, h3 {
+            color: darkred;
+        }
+
+        /* 6. Descendant Selector */
+        .box p {
+            color: purple;
+            padding: 10px;
+        }
+
+        /* 7. Child Selector */
+        .menu > li {
+            color: brown;
+            margin: 5px;
+        }
+
+        /* 8. Attribute Selector */
+        input[type="text"] {
+            border: 2px solid blue;
+            padding: 8px;
+        }
+
+        /* 9. Pseudo-class Selector */
+        a:hover {
+            color: red;
+            text-decoration: none;
+        }
+
+        /* Box styling */
+        .box {
+            background-color: white;
+            border: 2px solid black;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1 id="main-heading">CSS Selectors Demonstration</h1>
+
+    <h2>Class Selector</h2>
+
+    <p class="highlight">
+        This paragraph uses a class selector.
+    </p>
+
+    <h2>Descendant Selector</h2>
+
+    <div class="box">
+        <p>This paragraph is inside the box.</p>
+        <p>It is styled using a descendant selector.</p>
+    </div>
+
+    <h2>Child Selector</h2>
+
+    <ul class="menu">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <h2>Attribute Selector</h2>
+
+    <input type="text" placeholder="Enter your name">
+
+    <h3>Hover Selector</h3>
+
+    <a href="#">Move the mouse over this link</a>
+
+</body>
+</html>

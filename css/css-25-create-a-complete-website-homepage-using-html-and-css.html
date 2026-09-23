@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website - Homepage</title>
+
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #023047;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .menu a:hover {
+            color: #ffb703;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 500px;
+            background: linear-gradient(
+                rgba(2, 48, 71, 0.8),
+                rgba(0, 119, 182, 0.8)
+            );
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 600px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            background-color: #ffb703;
+            color: #222;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #fb8500;
+            color: white;
+        }
+
+        /* Common Section */
+        section {
+            padding: 60px 30px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #023047;
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        /* Services */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background-color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-card h3 {
+            color: #0077b6;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: #666;
+        }
+
+        /* About */
+        .about {
+            background-color: white;
+            text-align: center;
+            max-width: 100%;
+        }
+
+        .about p {
+            max-width: 750px;
+            margin: auto;
+            font-size: 18px;
+        }
+
+        /* Contact */
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #023047;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+
+            nav {
+                padding: 15px 20px;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .menu {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            .services {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+
+            .hero {
+                height: 400px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 40px 20px;
+            }
+
+            section h2 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">MyWebsite</div>
+
+        <ul class="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <h1>Welcome to My Website</h1>
+
+        <p>
+            We create modern, responsive and user-friendly websites
+            using HTML and CSS.
+        </p>
+
+        <a href="#services" class="btn">Explore Services</a>
+
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+
+        <h2>Our Services</h2>
+
+        <div class="services">
+
+            <div class="service-card">
+                <h3>Web Design</h3>
+                <p>
+                    We design attractive and user-friendly websites
+                    for different purposes.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>Responsive Design</h3>
+                <p>
+                    Our websites work smoothly on desktops,
+                    tablets and mobile devices.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>Web Development</h3>
+                <p>
+                    We build functional websites using modern
+                    web technologies.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+
+        <h2>About Us</h2>
+
+        <p>
+            We are a team passionate about web design and development.
+            Our goal is to create simple, beautiful and responsive
+            websites that provide a great user experience.
+        </p>
+
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+
+        <h2>Contact Us</h2>
+
+        <p>Email: info@example.com</p>
+        <p>Phone: +91 98765 43210</p>
+        <p>Location: Chennai, India</p>
+
+        <br>
+
+        <a href="mailto:info@example.com" class="btn">
+            Send Email
+        </a>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 MyWebsite. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

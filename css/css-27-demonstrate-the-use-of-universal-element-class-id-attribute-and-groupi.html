@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Demonstration</title>
+
+    <style>
+
+        /* 1. Universal Selector */
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* 2. Element Selector */
+        body {
+            background-color: #f2f2f2;
+            margin: 30px;
+        }
+
+        /* 3. Class Selector */
+        .highlight {
+            color: green;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* 4. ID Selector */
+        #main-heading {
+            color: blue;
+            text-align: center;
+            background-color: lightblue;
+            padding: 15px;
+        }
+
+        /* 5. Attribute Selector */
+        input[type="text"] {
+            border: 2px solid blue;
+            padding: 10px;
+            background-color: #eaf4ff;
+        }
+
+        input[type="email"] {
+            border: 2px solid green;
+            padding: 10px;
+            background-color: #eaffea;
+        }
+
+        /* 6. Grouping Selector */
+        h2, h3, p {
+            line-height: 1.6;
+        }
+
+        h2, h3 {
+            color: darkred;
+        }
+
+        /* Additional styling */
+        .box {
+            background-color: white;
+            border: 2px solid #ccc;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ID Selector -->
+    <h1 id="main-heading">CSS Selectors</h1>
+
+    <div class="box">
+
+        <!-- Element Selector -->
+        <h2>Element Selector</h2>
+        <p>
+            The body, h2, h3, and p elements demonstrate
+            element selectors.
+        </p>
+
+        <!-- Class Selector -->
+        <h2>Class Selector</h2>
+        <p class="highlight">
+            This paragraph uses the class selector.
+        </p>
+
+        <!-- Attribute Selector -->
+        <h2>Attribute Selector</h2>
+
+        <label>Name:</label>
+        <input type="text" placeholder="Enter your name">
+
+        <br><br>
+
+        <label>Email:</label>
+        <input type="email" placeholder="Enter your email">
+
+        <!-- Grouping Selector -->
+        <h2>Grouping Selector</h2>
+        <h3>This heading is grouped with other selectors.</h3>
+        <p>
+            Multiple elements can be styled using one CSS rule.
+        </p>
+
+    </div>
+
+</body>
+</html>

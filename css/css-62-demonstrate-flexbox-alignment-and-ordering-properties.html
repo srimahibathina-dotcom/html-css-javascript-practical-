@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flexbox Alignment and Ordering</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1d3557;
+            margin-bottom: 30px;
+        }
+
+        .section {
+            background-color: white;
+            padding: 25px;
+            margin: 20px auto;
+            max-width: 900px;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            color: #457b9d;
+            margin-bottom: 15px;
+        }
+
+        /* justify-content */
+        .justify-box {
+            display: flex;
+            justify-content: space-between;
+            background-color: #e9ecef;
+            padding: 20px;
+        }
+
+        /* align-items */
+        .align-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 180px;
+            gap: 15px;
+            background-color: #e9ecef;
+        }
+
+        /* Order */
+        .order-box {
+            display: flex;
+            gap: 15px;
+            background-color: #e9ecef;
+            padding: 20px;
+        }
+
+        .item {
+            background-color: #1d3557;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 6px;
+            flex: 1;
+        }
+
+        .order1 {
+            order: 3;
+        }
+
+        .order2 {
+            order: 1;
+        }
+
+        .order3 {
+            order: 2;
+        }
+
+        /* Align Self */
+        .self-box {
+            display: flex;
+            align-items: flex-start;
+            height: 180px;
+            gap: 15px;
+            background-color: #e9ecef;
+            padding: 20px;
+        }
+
+        .self-item {
+            background-color: #e63946;
+            color: white;
+            padding: 20px;
+            border-radius: 6px;
+        }
+
+        .self-center {
+            align-self: center;
+        }
+
+        .self-end {
+            align-self: flex-end;
+        }
+
+        /* Flex Direction */
+        .direction-box {
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 15px;
+            background-color: #e9ecef;
+            padding: 20px;
+        }
+
+        .direction-item {
+            background-color: #2a9d8f;
+            color: white;
+            padding: 20px;
+            flex: 1;
+            text-align: center;
+            border-radius: 6px;
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 600px) {
+            .justify-box,
+            .order-box,
+            .direction-box {
+                flex-direction: column;
+            }
+
+            .item,
+            .direction-item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Flexbox Alignment and Ordering</h1>
+
+    <!-- justify-content -->
+    <div class="section">
+        <h2>1. justify-content</h2>
+
+        <div class="justify-box">
+            <div class="item">Box 1</div>
+            <div class="item">Box 2</div>
+            <div class="item">Box 3</div>
+        </div>
+    </div>
+
+    <!-- align-items -->
+    <div class="section">
+        <h2>2. align-items</h2>
+
+        <div class="align-box">
+            <div class="item">Box 1</div>
+            <div class="item">Box 2</div>
+            <div class="item">Box 3</div>
+        </div>
+    </div>
+
+    <!-- order -->
+    <div class="section">
+        <h2>3. order</h2>
+
+        <div class="order-box">
+            <div class="item order1">Original 1</div>
+            <div class="item order2">Original 2</div>
+            <div class="item order3">Original 3</div>
+        </div>
+    </div>
+
+    <!-- align-self -->
+    <div class="section">
+        <h2>4. align-self</h2>
+
+        <div class="self-box">
+            <div class="self-item">Start</div>
+            <div class="self-item self-center">Center</div>
+            <div class="self-item self-end">End</div>
+        </div>
+    </div>
+
+    <!-- flex-direction -->
+    <div class="section">
+        <h2>5. flex-direction</h2>
+
+        <div class="direction-box">
+            <div class="direction-item">One</div>
+            <div class="direction-item">Two</div>
+            <div class="direction-item">Three</div>
+        </div>
+    </div>
+
+</body>
+</html>

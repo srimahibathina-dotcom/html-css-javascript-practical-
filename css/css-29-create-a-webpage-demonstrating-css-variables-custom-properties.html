@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+
+    <style>
+        /* Define CSS Variables */
+        :root {
+            --primary-color: #0077b6;
+            --secondary-color: #023e8a;
+            --background-color: #f2f2f2;
+            --text-color: #333;
+            --card-color: white;
+            --spacing: 20px;
+            --border-radius: 10px;
+        }
+
+        /* Use CSS Variables */
+        body {
+            margin: 0;
+            padding: 30px;
+            font-family: Arial, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        h1 {
+            color: var(--primary-color);
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .card {
+            background-color: var(--card-color);
+            padding: var(--spacing);
+            margin: var(--spacing) 0;
+            border: 3px solid var(--primary-color);
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h2 {
+            color: var(--secondary-color);
+        }
+
+        .button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 25px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Change variables for a special section */
+        .dark-card {
+            --card-color: var(--secondary-color);
+            --text-color: white;
+
+            background-color: var(--card-color);
+            color: var(--text-color);
+        }
+
+        .dark-card h2 {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>CSS Variables Demonstration</h1>
+
+        <div class="card">
+            <h2>Card 1</h2>
+            <p>
+                This card uses CSS variables for colors, spacing,
+                and border radius.
+            </p>
+            <a href="#" class="button">Learn More</a>
+        </div>
+
+        <div class="card">
+            <h2>Card 2</h2>
+            <p>
+                The same CSS variables can be reused throughout
+                the webpage.
+            </p>
+        </div>
+
+        <div class="card dark-card">
+            <h2>Custom Variables</h2>
+            <p>
+                This section overrides some CSS variables locally.
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>

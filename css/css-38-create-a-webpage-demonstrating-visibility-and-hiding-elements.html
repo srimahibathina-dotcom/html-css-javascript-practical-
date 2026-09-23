@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Visibility and Hiding</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .box {
+            width: 200px;
+            padding: 20px;
+            margin: 15px auto;
+            color: white;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+
+        /* Element is visible */
+        .visible {
+            background-color: green;
+            visibility: visible;
+        }
+
+        /* Element is hidden but space is preserved */
+        .hidden {
+            background-color: red;
+            visibility: hidden;
+        }
+
+        /* Element is removed from the layout */
+        .none {
+            background-color: blue;
+            display: none;
+        }
+
+        /* Element is transparent but space is preserved */
+        .transparent {
+            background-color: purple;
+            opacity: 0;
+        }
+
+        .note {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #eeeeee;
+            border-left: 5px solid #0077b6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Visibility and Hiding Elements</h1>
+
+    <div class="container">
+
+        <!-- Visible -->
+        <div class="box visible">
+            Visible Element
+        </div>
+
+        <p>
+            The green element uses
+            <strong>visibility: visible</strong>.
+        </p>
+
+        <hr>
+
+        <!-- Hidden -->
+        <div class="box hidden">
+            Hidden Element
+        </div>
+
+        <p>
+            The red element uses
+            <strong>visibility: hidden</strong>.
+            Its space is still preserved.
+        </p>
+
+        <hr>
+
+        <!-- Display None -->
+        <div class="box none">
+            Display None
+        </div>
+
+        <p>
+            The blue element uses
+            <strong>display: none</strong>.
+            It is completely removed from the layout.
+        </p>
+
+        <hr>
+
+        <!-- Opacity -->
+        <div class="box transparent">
+            Transparent Element
+        </div>
+
+        <p>
+            The purple element uses
+            <strong>opacity: 0</strong>.
+            It becomes invisible, but its space is preserved.
+        </p>
+
+        <div class="note">
+            <strong>Summary:</strong><br><br>
+
+            visibility: visible → Element is visible.<br>
+            visibility: hidden → Element is hidden, but space remains.<br>
+            display: none → Element is hidden and takes no space.<br>
+            opacity: 0 → Element is transparent, but space remains.
+        </div>
+
+    </div>
+
+</body>
+</html>

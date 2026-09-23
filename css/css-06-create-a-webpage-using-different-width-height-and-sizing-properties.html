@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Width and Height</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        /* Fixed width and height */
+        .fixed-box {
+            width: 300px;
+            height: 150px;
+            background-color: lightblue;
+            border: 3px solid blue;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        /* Percentage width */
+        .percentage-box {
+            width: 70%;
+            height: 120px;
+            background-color: lightgreen;
+            border: 3px solid green;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        /* Minimum and maximum width */
+        .responsive-box {
+            width: 80%;
+            min-width: 250px;
+            max-width: 600px;
+            height: 150px;
+            background-color: lightyellow;
+            border: 3px solid orange;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        /* Minimum and maximum height */
+        .height-box {
+            width: 300px;
+            min-height: 100px;
+            max-height: 200px;
+            background-color: pink;
+            border: 3px solid red;
+            margin: 20px auto;
+            padding: 20px;
+            overflow: auto;
+        }
+
+        /* Viewport-based sizing */
+        .viewport-box {
+            width: 50vw;
+            height: 20vh;
+            background-color: lavender;
+            border: 3px solid purple;
+            margin: 20px auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Width, Height and Sizing</h1>
+
+    <div class="fixed-box">
+        <h2>Fixed Size</h2>
+        <p>Width: 300px | Height: 150px</p>
+    </div>
+
+    <div class="percentage-box">
+        <h2>Percentage Size</h2>
+        <p>Width: 70% | Height: 120px</p>
+    </div>
+
+    <div class="responsive-box">
+        <h2>Responsive Size</h2>
+        <p>
+            Min-width: 250px<br>
+            Max-width: 600px
+        </p>
+    </div>
+
+    <div class="height-box">
+        <h2>Height Limits</h2>
+        <p>
+            Min-height: 100px<br>
+            Max-height: 200px
+        </p>
+    </div>
+
+    <div class="viewport-box">
+        <h2>Viewport Size</h2>
+        <p>Width: 50vw | Height: 20vh</p>
+    </div>
+
+</body>
+</html>

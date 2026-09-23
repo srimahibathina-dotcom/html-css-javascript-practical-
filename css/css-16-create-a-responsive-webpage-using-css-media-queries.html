@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Webpage</title>
+
+    <style>
+        /* Basic styling */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        header {
+            background-color: #0077b6;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        nav {
+            background-color: #023e8a;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: #90e0ef;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .card {
+            background-color: white;
+            border: 2px solid #0077b6;
+            border-radius: 10px;
+            padding: 20px;
+            flex: 1;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #03045e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Tablet */
+        @media screen and (max-width: 768px) {
+
+            header {
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            .container {
+                flex-wrap: wrap;
+            }
+
+            .card {
+                flex: 1 1 45%;
+            }
+        }
+
+        /* Mobile */
+        @media screen and (max-width: 480px) {
+
+            header h1 {
+                font-size: 22px;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            nav a {
+                font-size: 16px;
+            }
+
+            .container {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            .card {
+                width: 100%;
+            }
+
+            footer {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Responsive Website</h1>
+        <p>Resize the browser window to see the changes</p>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="container">
+
+        <div class="card">
+            <h2>HTML</h2>
+            <p>HTML creates the structure of a webpage.</p>
+        </div>
+
+        <div class="card">
+            <h2>CSS</h2>
+            <p>CSS adds style and design to webpages.</p>
+        </div>
+
+        <div class="card">
+            <h2>JavaScript</h2>
+            <p>JavaScript adds interactivity to webpages.</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 My Website</p>
+    </footer>
+
+</body>
+</html>

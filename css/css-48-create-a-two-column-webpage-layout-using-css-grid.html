@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Column Layout</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        /* Header */
+        header {
+            background-color: #1d3557;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* Two Column Grid */
+        .container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        /* Main Content */
+        .main-content {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .main-content h2 {
+            color: #1d3557;
+            margin-bottom: 15px;
+        }
+
+        .main-content p {
+            color: #555;
+            line-height: 1.7;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background-color: #457b9d;
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .sidebar h2 {
+            margin-bottom: 15px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li {
+            padding: 10px;
+            margin-bottom: 8px;
+            background-color: #1d3557;
+            border-radius: 5px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1d3557;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        /* Responsive Layout */
+        @media screen and (max-width: 600px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Webpage</h1>
+        <p>Two-Column CSS Grid Layout</p>
+    </header>
+
+    <div class="container">
+
+        <!-- Main Column -->
+        <main class="main-content">
+            <h2>Welcome to My Website</h2>
+
+            <p>
+                This is the main content area of the webpage.
+                CSS Grid is used to create a two-column layout.
+                The main column is wider than the sidebar.
+            </p>
+
+            <br>
+
+            <p>
+                CSS Grid makes it easy to arrange content into
+                rows and columns. The layout is also responsive
+                and changes to a single column on smaller screens.
+            </p>
+        </main>
+
+        <!-- Sidebar Column -->
+        <aside class="sidebar">
+            <h2>Sidebar</h2>
+
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Contact</li>
+            </ul>
+        </aside>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 My Webpage</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Properties</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        /* 1. Display Block */
+        .block {
+            display: block;
+            background-color: #0077b6;
+            color: white;
+            padding: 15px;
+            margin: 10px 0;
+        }
+
+        /* 2. Display Inline */
+        .inline {
+            display: inline;
+            background-color: #2a9d8f;
+            color: white;
+            padding: 10px;
+        }
+
+        /* 3. Display Inline-Block */
+        .inline-block {
+            display: inline-block;
+            width: 180px;
+            height: 80px;
+            background-color: #f4a261;
+            color: white;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        /* 4. Display None */
+        .none {
+            display: none;
+            background-color: #e63946;
+            color: white;
+            padding: 15px;
+        }
+
+        .note {
+            background-color: #eee;
+            padding: 15px;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Display Properties</h1>
+
+    <div class="container">
+
+        <!-- Block -->
+        <h2>1. Display: Block</h2>
+
+        <div class="block">Block Element 1</div>
+        <div class="block">Block Element 2</div>
+
+        <p>
+            Block elements start on a new line and take the full
+            available width.
+        </p>
+
+        <hr>
+
+        <!-- Inline -->
+        <h2>2. Display: Inline</h2>
+
+        <span class="inline">Inline Element 1</span>
+        <span class="inline">Inline Element 2</span>
+
+        <p>
+            Inline elements stay on the same line and normally
+            take only the width of their content.
+        </p>
+
+        <hr>
+
+        <!-- Inline Block -->
+        <h2>3. Display: Inline-Block</h2>
+
+        <div class="inline-block">
+            Box 1
+        </div>
+
+        <div class="inline-block">
+            Box 2
+        </div>
+
+        <div class="inline-block">
+            Box 3
+        </div>
+
+        <p>
+            Inline-block elements appear on the same line while
+            allowing width and height to be set.
+        </p>
+
+        <hr>
+
+        <!-- None -->
+        <h2>4. Display: None</h2>
+
+        <div class="none">
+            You cannot see this element because display is set to none.
+        </div>
+
+        <p>
+            The red box is hidden because
+            <strong>display: none</strong> removes the element
+            from the page layout.
+        </p>
+
+        <div class="note">
+            <strong>Note:</strong> Inspect the HTML/CSS to see the
+            hidden element.
+        </div>
+
+    </div>
+
+</body>
+</html>

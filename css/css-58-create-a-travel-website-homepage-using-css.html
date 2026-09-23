@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Travel World</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f9fc;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #0077b6;
+            color: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ffd166;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 500px;
+
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.5),
+                    rgba(0, 0, 0, 0.5)
+                ),
+                url("https://picsum.photos/id/1036/1400/600");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #ff9f1c;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background-color: #e85d04;
+        }
+
+        /* Section */
+        section {
+            padding: 60px 7%;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #0077b6;
+            font-size: 32px;
+            margin-bottom: 35px;
+        }
+
+        /* Destinations */
+        .destination-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .destination-card {
+            width: 280px;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s;
+        }
+
+        .destination-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .destination-card img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+        }
+
+        .destination-info {
+            padding: 20px;
+        }
+
+        .destination-info h3 {
+            color: #0077b6;
+            margin-bottom: 10px;
+        }
+
+        .destination-info p {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* Packages */
+        .packages {
+            background-color: white;
+        }
+
+        .package-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .package {
+            background-color: #eaf6ff;
+            padding: 25px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .package h3 {
+            color: #0077b6;
+            margin-bottom: 10px;
+        }
+
+        .package p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .price {
+            font-size: 22px;
+            font-weight: bold;
+            color: #e85d04;
+        }
+
+        /* About */
+        .about {
+            text-align: center;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        /* Contact */
+        .contact {
+            background-color: #caf0f8;
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #023047;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* Tablet */
+        @media screen and (max-width: 900px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .package-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+        }
+
+        /* Mobile */
+        @media screen and (max-width: 600px) {
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+
+            .hero {
+                height: 400px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 40px 20px;
+            }
+
+            .package-container {
+                grid-template-columns: 1fr;
+            }
+
+            .destination-card {
+                width: 100%;
+                max-width: 350px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <div class="logo">
+            ✈ Travel World
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <div>
+            <h1>Explore The World</h1>
+
+            <p>
+                Discover beautiful places and create unforgettable memories.
+            </p>
+
+            <a href="#destinations" class="btn">
+                Explore Now
+            </a>
+        </div>
+
+    </section>
+
+    <!-- Destinations -->
+    <section id="destinations">
+
+        <h2>Popular Destinations</h2>
+
+        <div class="destination-container">
+
+            <div class="destination-card">
+
+                <img src="https://picsum.photos/id/1016/500/300"
+                     alt="Paris">
+
+                <div class="destination-info">
+                    <h3>Paris</h3>
+
+                    <p>
+                        Experience beautiful architecture,
+                        culture, food, and famous landmarks.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="destination-card">
+
+                <img src="https://picsum.photos/id/1018/500/300"
+                     alt="Mountains">
+
+                <div class="destination-info">
+                    <h3>Swiss Alps</h3>
+
+                    <p>
+                        Enjoy breathtaking mountains,
+                        peaceful landscapes, and adventure.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="destination-card">
+
+                <img src="https://picsum.photos/id/1019/500/300"
+                     alt="Beach">
+
+                <div class="destination-info">
+                    <h3>Maldives</h3>
+
+                    <p>
+                        Relax on beautiful beaches and
+                        enjoy crystal-clear blue waters.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Packages -->
+    <section class="packages" id="packages">
+
+        <h2>Travel Packages</h2>
+
+        <div class="package-container">
+
+            <div class="package">
+                <h3>Weekend Trip</h3>
+                <p>3 Days / 2 Nights</p>
+                <div class="price">₹9,999</div>
+            </div>
+
+            <div class="package">
+                <h3>Family Vacation</h3>
+                <p>5 Days / 4 Nights</p>
+                <div class="price">₹19,999</div>
+            </div>
+
+            <div class="package">
+                <h3>Adventure Tour</h3>
+                <p>7 Days / 6 Nights</p>
+                <div class="price">₹29,999</div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+
+        <h2>About Travel World</h2>
+
+        <p>
+            Travel World helps travelers discover exciting destinations
+            and plan memorable trips. We offer a variety of travel
+            packages designed for families, friends, couples, and
+            adventure lovers.
+        </p>
+
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+
+        <h2>Contact Us</h2>
+
+        <p><strong>Email:</strong> travelworld@example.com</p>
+        <p><strong>Phone:</strong> +91 98765 43210</p>
+        <p><strong>Location:</strong> Chennai, India</p>
+
+        <br>
+
+        <a href="#" class="btn">
+            Book Your Trip
+        </a>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            &copy; 2026 Travel World. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>

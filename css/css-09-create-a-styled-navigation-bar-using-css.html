@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Navigation Bar</title>
+
+    <style>
+        /* Navigation Bar */
+        nav {
+            background-color: #222;
+            padding: 15px;
+            text-align: center;
+        }
+
+        /* Navigation Links */
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            margin: 0 5px;
+            display: inline-block;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+
+        /* Hover Effect */
+        nav a:hover {
+            background-color: #00bcd4;
+            color: black;
+        }
+
+        /* Active Link */
+        nav a.active {
+            background-color: #0077b6;
+            color: white;
+        }
+
+        /* Page Content */
+        .content {
+            text-align: center;
+            padding: 50px;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="#" class="active">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <!-- Content -->
+    <div class="content">
+        <h1>Welcome to My Website</h1>
+        <p>
+            This webpage demonstrates a styled navigation bar using CSS.
+        </p>
+    </div>
+
+</body>
+</html>

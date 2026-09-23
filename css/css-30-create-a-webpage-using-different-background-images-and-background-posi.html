@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Background Images</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 25px;
+            color: #333;
+        }
+
+        /* Background image positioned at center */
+        .center-bg {
+            height: 250px;
+            margin: 20px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            font-weight: bold;
+
+            background-image: url("https://picsum.photos/id/1015/1000/500");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        /* Background image positioned at top left */
+        .top-left-bg {
+            height: 250px;
+            margin: 20px;
+            padding: 30px;
+            color: white;
+            font-size: 25px;
+
+            background-image: url("https://picsum.photos/id/1016/1000/500");
+            background-size: cover;
+            background-position: top left;
+            background-repeat: no-repeat;
+        }
+
+        /* Background image positioned at bottom right */
+        .bottom-right-bg {
+            height: 250px;
+            margin: 20px;
+            padding: 30px;
+            color: white;
+            font-size: 25px;
+
+            background-image: url("https://picsum.photos/id/1025/1000/500");
+            background-size: cover;
+            background-position: bottom right;
+            background-repeat: no-repeat;
+        }
+
+        /* Background image positioned at top center */
+        .top-center-bg {
+            height: 250px;
+            margin: 20px;
+            padding: 30px;
+            color: white;
+            font-size: 25px;
+
+            background-image: url("https://picsum.photos/id/1035/1000/500");
+            background-size: cover;
+            background-position: top center;
+            background-repeat: no-repeat;
+        }
+
+        /* Background image with fixed attachment */
+        .fixed-bg {
+            height: 300px;
+            margin: 20px;
+            padding: 40px;
+            color: white;
+            text-align: center;
+            font-size: 25px;
+
+            background-image: url("https://picsum.photos/id/1043/1200/600");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* Responsive design */
+        @media screen and (max-width: 600px) {
+            .center-bg,
+            .top-left-bg,
+            .bottom-right-bg,
+            .top-center-bg {
+                height: 200px;
+                font-size: 20px;
+            }
+
+            .fixed-bg {
+                height: 250px;
+                font-size: 20px;
+                background-attachment: scroll;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Background Images and Positioning</h1>
+
+    <div class="center-bg">
+        Background Position: Center
+    </div>
+
+    <div class="top-left-bg">
+        Background Position: Top Left
+    </div>
+
+    <div class="bottom-right-bg">
+        Background Position: Bottom Right
+    </div>
+
+    <div class="top-center-bg">
+        Background Position: Top Center
+    </div>
+
+    <div class="fixed-bg">
+        Background Attachment: Fixed
+    </div>
+
+</body>
+</html>

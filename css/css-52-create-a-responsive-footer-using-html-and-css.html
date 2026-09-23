@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Footer</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Main Content */
+        .content {
+            flex: 1;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .content h1 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .content p {
+            color: #666;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1d3557;
+            color: white;
+            padding: 40px 30px 20px;
+        }
+
+        .footer-container {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-section h2 {
+            margin-bottom: 15px;
+            color: #a8dadc;
+        }
+
+        .footer-section p {
+            line-height: 1.6;
+            color: #ddd;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            color: #ddd;
+            text-decoration: none;
+        }
+
+        .footer-section ul li a:hover {
+            color: #a8dadc;
+        }
+
+        /* Social Links */
+        .social a {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            margin-right: 15px;
+            padding: 8px 12px;
+            background-color: #457b9d;
+            border-radius: 5px;
+        }
+
+        .social a:hover {
+            background-color: #a8dadc;
+            color: #1d3557;
+        }
+
+        /* Copyright */
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #457b9d;
+            margin-top: 30px;
+            padding-top: 20px;
+            color: #ccc;
+        }
+
+        /* Responsive Footer */
+        @media screen and (max-width: 700px) {
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-section {
+                width: 100%;
+            }
+
+            .social a {
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>Welcome to My Website</h1>
+        <p>Scroll down to view the responsive footer.</p>
+    </div>
+
+    <!-- Responsive Footer -->
+    <footer>
+
+        <div class="footer-container">
+
+            <!-- About -->
+            <div class="footer-section">
+                <h2>About Us</h2>
+                <p>
+                    We create simple and responsive websites
+                    using HTML and CSS.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h2>Quick Links</h2>
+
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-section">
+                <h2>Contact</h2>
+
+                <p>Email: example@email.com</p>
+                <p>Phone: +91 98765 43210</p>
+                <p>Chennai, India</p>
+            </div>
+
+            <!-- Social Media -->
+            <div class="footer-section social">
+                <h2>Follow Us</h2>
+
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+
+        </div>
+
+        <!-- Copyright -->
+        <div class="copyright">
+            <p>&copy; 2026 My Website. All Rights Reserved.</p>
+        </div>
+
+    </footer>
+
+</body>
+</html>

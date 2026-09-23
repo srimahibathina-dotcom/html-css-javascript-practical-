@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Keyframe Animations</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            color: #1d3557;
+            margin-bottom: 15px;
+        }
+
+        .description {
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        /* Animation 1: Moving Box */
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #e63946;
+            margin: 30px auto;
+
+            animation: moveBox 3s infinite alternate;
+        }
+
+        @keyframes moveBox {
+            0% {
+                transform: translateX(-150px);
+                background-color: #e63946;
+            }
+
+            50% {
+                background-color: #f4a261;
+            }
+
+            100% {
+                transform: translateX(150px);
+                background-color: #2a9d8f;
+            }
+        }
+
+        /* Animation 2: Rotating Circle */
+        .circle {
+            width: 100px;
+            height: 100px;
+            background-color: #457b9d;
+            border-radius: 50%;
+            margin: 50px auto;
+
+            animation: rotateCircle 2s linear infinite;
+        }
+
+        @keyframes rotateCircle {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Animation 3: Bouncing Text */
+        .text {
+            font-size: 30px;
+            font-weight: bold;
+            color: #1d3557;
+            margin: 50px auto;
+
+            animation: bounce 1s infinite alternate;
+        }
+
+        @keyframes bounce {
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(-30px);
+            }
+        }
+
+        /* Animation 4: Fading Box */
+        .fade-box {
+            width: 150px;
+            height: 80px;
+            background-color: #6a4c93;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px auto;
+            border-radius: 10px;
+
+            animation: fade 2s infinite alternate;
+        }
+
+        @keyframes fade {
+            0% {
+                opacity: 0.2;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Keyframe Animations</h1>
+
+    <p class="description">
+        This webpage demonstrates different CSS animations.
+    </p>
+
+    <!-- Moving Animation -->
+    <h2>Moving Box</h2>
+
+    <div class="box"></div>
+
+    <!-- Rotation Animation -->
+    <h2>Rotating Circle</h2>
+
+    <div class="circle"></div>
+
+    <!-- Bounce Animation -->
+    <h2>Bouncing Text</h2>
+
+    <div class="text">
+        Welcome!
+    </div>
+
+    <!-- Fade Animation -->
+    <h2>Fading Box</h2>
+
+    <div class="fade-box">
+        Hello!
+    </div>
+
+</body>
+</html>

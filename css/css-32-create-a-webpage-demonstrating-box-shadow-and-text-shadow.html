@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Shadow and Text Shadow</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 50px;
+        }
+
+        /* Text Shadow */
+        h1 {
+            color: #0077b6;
+            font-size: 40px;
+            text-shadow: 3px 3px 5px gray;
+        }
+
+        /* Box Shadow */
+        .card {
+            width: 300px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+
+            /* box-shadow */
+            box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .card h2 {
+            color: #023e8a;
+            text-shadow: 2px 2px 3px #aaa;
+        }
+
+        .card p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Multiple Box Shadows */
+        .box {
+            width: 200px;
+            height: 100px;
+            margin: 40px auto;
+            background-color: #00b4d8;
+            color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            box-shadow:
+                5px 5px 10px red,
+                -5px -5px 10px blue;
+        }
+
+        /* Inset Shadow */
+        .inset-box {
+            width: 250px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+
+            box-shadow: inset 0 0 15px gray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Shadow Effects</h1>
+
+    <!-- Box Shadow -->
+    <div class="card">
+        <h2>Box Shadow</h2>
+        <p>
+            This card demonstrates the CSS box-shadow property.
+            It creates a shadow around the element.
+        </p>
+    </div>
+
+    <!-- Multiple Box Shadows -->
+    <div class="box">
+        Multiple Shadows
+    </div>
+
+    <!-- Text Shadow -->
+    <div class="card">
+        <h2>Text Shadow</h2>
+        <p>
+            The heading above demonstrates the text-shadow property.
+        </p>
+    </div>
+
+    <!-- Inset Shadow -->
+    <div class="inset-box">
+        <h2>Inset Shadow</h2>
+        <p>
+            This box uses an inner shadow.
+        </p>
+    </div>
+
+</body>
+</html>

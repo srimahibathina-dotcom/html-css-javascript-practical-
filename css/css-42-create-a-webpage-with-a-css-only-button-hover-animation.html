@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Button Hover Animation</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        /* Basic Button */
+        .btn {
+            position: relative;
+            display: inline-block;
+            padding: 15px 35px;
+            background-color: #0077b6;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: bold;
+            overflow: hidden;
+            transition: transform 0.3s ease,
+                        background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #023e8a;
+            transform: translateY(-5px);
+        }
+
+        /* Sliding Background Button */
+        .slide-btn {
+            position: relative;
+            display: inline-block;
+            padding: 15px 35px;
+            color: #0077b6;
+            background-color: white;
+            border: 2px solid #0077b6;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .slide-btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: #0077b6;
+            transition: left 0.4s ease;
+            z-index: -1;
+        }
+
+        .slide-btn:hover::before {
+            left: 0;
+        }
+
+        .slide-btn:hover {
+            color: white;
+        }
+
+        /* Scale Button */
+        .scale-btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background-color: #e63946;
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: transform 0.3s ease,
+                        box-shadow 0.3s ease;
+        }
+
+        .scale-btn:hover {
+            transform: scale(1.15);
+            box-shadow: 0 8px 20px rgba(230, 57, 70, 0.4);
+        }
+
+        /* Glow Button */
+        .glow-btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background-color: #8338ec;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: box-shadow 0.4s ease,
+                        transform 0.4s ease;
+        }
+
+        .glow-btn:hover {
+            transform: translateY(-5px);
+            box-shadow:
+                0 0 10px #8338ec,
+                0 0 25px #8338ec,
+                0 0 40px #8338ec;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS-Only Button Hover Animations</h1>
+
+    <div class="button-container">
+
+        <!-- Lift Button -->
+        <a href="#" class="btn">
+            Hover Me
+        </a>
+
+        <!-- Sliding Button -->
+        <a href="#" class="slide-btn">
+            Slide Effect
+        </a>
+
+        <!-- Scale Button -->
+        <a href="#" class="scale-btn">
+            Scale Effect
+        </a>
+
+        <!-- Glow Button -->
+        <a href="#" class="glow-btn">
+            Glow Effect
+        </a>
+
+    </div>
+
+</body>
+</html>

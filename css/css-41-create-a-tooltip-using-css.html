@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Tooltip</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 50px;
+        }
+
+        /* Tooltip Container */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            background-color: #0077b6;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        /* Tooltip Text */
+        .tooltip .tooltip-text {
+            visibility: hidden;
+            width: 220px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 6px;
+
+            /* Position above the button */
+            position: absolute;
+            z-index: 1;
+            bottom: 130%;
+            left: 50%;
+            transform: translateX(-50%);
+
+            /* Smooth effect */
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        /* Tooltip Arrow */
+        .tooltip .tooltip-text::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+
+            border-width: 5px;
+            border-style: solid;
+            border-color: #333 transparent transparent transparent;
+        }
+
+        /* Show Tooltip on Hover */
+        .tooltip:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Another Tooltip */
+        .tooltip-bottom {
+            margin-top: 100px;
+        }
+
+        .tooltip-bottom .tooltip-text {
+            bottom: auto;
+            top: 130%;
+        }
+
+        .tooltip-bottom .tooltip-text::after {
+            top: auto;
+            bottom: 100%;
+            border-color: transparent transparent #333 transparent;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Tooltip Example</h1>
+
+    <!-- Tooltip Above -->
+    <div class="tooltip">
+        Hover Over Me
+
+        <span class="tooltip-text">
+            This is a tooltip message!
+        </span>
+    </div>
+
+    <!-- Tooltip Below -->
+    <div class="tooltip tooltip-bottom">
+        Hover Again
+
+        <span class="tooltip-text">
+            This tooltip appears below.
+        </span>
+    </div>
+
+</body>
+</html>

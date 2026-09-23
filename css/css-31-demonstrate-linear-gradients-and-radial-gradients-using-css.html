@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Gradients</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+        }
+
+        .box {
+            height: 200px;
+            margin: 25px 0;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        /* Linear Gradient */
+        .linear1 {
+            background: linear-gradient(to right, red, yellow);
+        }
+
+        /* Linear Gradient with multiple colors */
+        .linear2 {
+            background: linear-gradient(
+                to right,
+                #0077b6,
+                #00b4d8,
+                #90e0ef
+            );
+        }
+
+        /* Diagonal Linear Gradient */
+        .linear3 {
+            background: linear-gradient(
+                135deg,
+                purple,
+                blue,
+                cyan
+            );
+        }
+
+        /* Radial Gradient */
+        .radial1 {
+            background: radial-gradient(circle, red, yellow);
+        }
+
+        /* Radial Gradient with multiple colors */
+        .radial2 {
+            background: radial-gradient(
+                circle,
+                #ff006e,
+                #8338ec,
+                #3a0ca3
+            );
+        }
+
+        /* Elliptical Radial Gradient */
+        .radial3 {
+            background: radial-gradient(
+                ellipse,
+                #00b4d8,
+                #0077b6,
+                #023e8a
+            );
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Linear and Radial Gradients</h1>
+
+    <div class="container">
+
+        <!-- Linear Gradients -->
+        <div class="box linear1">
+            Linear Gradient
+        </div>
+
+        <div class="box linear2">
+            Multiple Color Linear Gradient
+        </div>
+
+        <div class="box linear3">
+            Diagonal Linear Gradient
+        </div>
+
+        <!-- Radial Gradients -->
+        <div class="box radial1">
+            Radial Gradient
+        </div>
+
+        <div class="box radial2">
+            Multiple Color Radial Gradient
+        </div>
+
+        <div class="box radial3">
+            Elliptical Radial Gradient
+        </div>
+
+    </div>
+
+</body>
+</html>

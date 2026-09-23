@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pseudo-Elements</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        /* ::before */
+        .before::before {
+            content: "★ ";
+            color: blue;
+            font-size: 25px;
+        }
+
+        /* ::after */
+        .after::after {
+            content: " ✓";
+            color: green;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        /* ::first-letter */
+        .first-letter::first-letter {
+            color: red;
+            font-size: 45px;
+            font-weight: bold;
+        }
+
+        /* ::first-line */
+        .first-line::first-line {
+            color: purple;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .box {
+            background-color: #f8f9fa;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 5px solid #0077b6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>CSS Pseudo-Elements</h1>
+
+        <div class="box">
+            <h2 class="before">Before Element</h2>
+            <p>
+                The ::before pseudo-element adds content before an element.
+            </p>
+        </div>
+
+        <div class="box">
+            <h2 class="after">After Element</h2>
+            <p>
+                The ::after pseudo-element adds content after an element.
+            </p>
+        </div>
+
+        <div class="box">
+            <h2>First Letter</h2>
+            <p class="first-letter">
+                This paragraph demonstrates the ::first-letter pseudo-element.
+                The first letter is styled differently from the rest of the text.
+            </p>
+        </div>
+
+        <div class="box">
+            <h2>First Line</h2>
+            <p class="first-line">
+                This is the first line of the paragraph and it has a different
+                style. The remaining lines have the normal style.
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            padding: 20px;
+        }
+
+        .container {
+            margin: 20px;
+        }
+
+        /* 1. Static Position */
+        .static-box {
+            position: static;
+            background-color: lightblue;
+            padding: 20px;
+            border: 2px solid blue;
+            margin-bottom: 20px;
+        }
+
+        /* 2. Relative Position */
+        .relative-box {
+            position: relative;
+            left: 50px;
+            background-color: lightgreen;
+            padding: 20px;
+            border: 2px solid green;
+            margin-bottom: 20px;
+        }
+
+        /* Parent for absolute positioning */
+        .parent {
+            position: relative;
+            height: 200px;
+            background-color: white;
+            border: 3px solid black;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        /* 3. Absolute Position */
+        .absolute-box {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            background-color: pink;
+            padding: 15px;
+            border: 2px solid red;
+        }
+
+        /* 4. Fixed Position */
+        .fixed-box {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background-color: purple;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        /* 5. Sticky Position */
+        .sticky-box {
+            position: sticky;
+            top: 0;
+            background-color: orange;
+            color: black;
+            padding: 15px;
+            text-align: center;
+            border: 2px solid darkorange;
+        }
+
+        .content {
+            height: 800px;
+            padding: 30px;
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Positioning Demonstration</h1>
+
+    <div class="container">
+
+        <!-- Static -->
+        <div class="static-box">
+            <h2>Static Position</h2>
+            <p>This element uses position: static.</p>
+        </div>
+
+        <!-- Relative -->
+        <div class="relative-box">
+            <h2>Relative Position</h2>
+            <p>This element is moved 50px from its normal position.</p>
+        </div>
+
+        <!-- Absolute -->
+        <div class="parent">
+            <h2>Parent Element</h2>
+            <p>The pink box is positioned absolutely inside this parent.</p>
+
+            <div class="absolute-box">
+                <b>Absolute</b>
+            </div>
+        </div>
+
+        <!-- Sticky -->
+        <div class="sticky-box">
+            <b>Sticky Position</b> - Scroll the page
+        </div>
+
+        <div class="content">
+            <h2>Page Content</h2>
+            <p>
+                Scroll down to see how the sticky element remains
+                at the top of the page.
+            </p>
+
+            <p>
+                This large content area is added to demonstrate
+                scrolling and sticky positioning.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Fixed -->
+    <div class="fixed-box">
+        Fixed Position
+    </div>
+
+</body>
+</html>

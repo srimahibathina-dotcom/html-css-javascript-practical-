@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Overflow Properties</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            width: 220px;
+            height: 150px;
+            background-color: white;
+            border: 3px solid #0077b6;
+            padding: 15px;
+            line-height: 1.5;
+        }
+
+        /* Overflow: Visible */
+        .visible {
+            overflow: visible;
+        }
+
+        /* Overflow: Hidden */
+        .hidden {
+            overflow: hidden;
+            border-color: #e63946;
+        }
+
+        /* Overflow: Scroll */
+        .scroll {
+            overflow: scroll;
+            border-color: #2a9d8f;
+        }
+
+        /* Overflow: Auto */
+        .auto {
+            overflow: auto;
+            border-color: #8338ec;
+        }
+
+        h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .visible h2 {
+            color: #0077b6;
+        }
+
+        .hidden h2 {
+            color: #e63946;
+        }
+
+        .scroll h2 {
+            color: #2a9d8f;
+        }
+
+        .auto h2 {
+            color: #8338ec;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Overflow Properties</h1>
+
+    <div class="container">
+
+        <!-- Overflow Visible -->
+        <div class="box visible">
+            <h2>overflow: visible</h2>
+            <p>
+                This is a long paragraph. When the content is larger
+                than the box, it can extend outside the boundaries of
+                the element.
+            </p>
+        </div>
+
+        <!-- Overflow Hidden -->
+        <div class="box hidden">
+            <h2>overflow: hidden</h2>
+            <p>
+                This is a long paragraph. Extra content is clipped and
+                cannot be seen outside the boundaries of the box.
+                More text is added to demonstrate the hidden overflow.
+            </p>
+        </div>
+
+        <!-- Overflow Scroll -->
+        <div class="box scroll">
+            <h2>overflow: scroll</h2>
+            <p>
+                This is a long paragraph. Scrollbars are always
+                displayed, allowing the user to scroll through the
+                content inside the box.
+                Additional content is included here.
+            </p>
+        </div>
+
+        <!-- Overflow Auto -->
+        <div class="box auto">
+            <h2>overflow: auto</h2>
+            <p>
+                This is a long paragraph. Scrollbars appear only when
+                the content exceeds the available space inside the box.
+                This demonstrates automatic overflow handling.
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>

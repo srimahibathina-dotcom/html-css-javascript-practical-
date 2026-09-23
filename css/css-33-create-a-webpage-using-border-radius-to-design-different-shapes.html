@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Radius Shapes</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 30px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .shape {
+            width: 150px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Rounded Rectangle */
+        .rounded {
+            background-color: #0077b6;
+            border-radius: 20px;
+        }
+
+        /* Circle */
+        .circle {
+            background-color: #e63946;
+            border-radius: 50%;
+        }
+
+        /* Pill Shape */
+        .pill {
+            width: 250px;
+            height: 100px;
+            background-color: #2a9d8f;
+            border-radius: 50px;
+        }
+
+        /* Oval Shape */
+        .oval {
+            width: 250px;
+            height: 150px;
+            background-color: #f4a261;
+            border-radius: 50%;
+        }
+
+        /* Top Corners Rounded */
+        .top-rounded {
+            background-color: #8338ec;
+            border-radius: 60px 60px 0 0;
+        }
+
+        /* Bottom Corners Rounded */
+        .bottom-rounded {
+            background-color: #ff006e;
+            border-radius: 0 0 60px 60px;
+        }
+
+        /* Different Radius for Each Corner */
+        .custom {
+            background-color: #023e8a;
+            border-radius: 10px 40px 70px 100px;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 600px) {
+            .shape {
+                width: 130px;
+                height: 130px;
+            }
+
+            .pill,
+            .oval {
+                width: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Border-Radius Shapes</h1>
+
+    <div class="container">
+
+        <div class="shape rounded">
+            Rounded Rectangle
+        </div>
+
+        <div class="shape circle">
+            Circle
+        </div>
+
+        <div class="shape pill">
+            Pill Shape
+        </div>
+
+        <div class="shape oval">
+            Oval
+        </div>
+
+        <div class="shape top-rounded">
+            Top Rounded
+        </div>
+
+        <div class="shape bottom-rounded">
+            Bottom Rounded
+        </div>
+
+        <div class="shape custom">
+            Custom Shape
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mobile First Website</title>
+
+    <style>
+        /* =========================
+           Base Styles - Mobile First
+           ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f9;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #264653;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        /* Navigation */
+        nav ul {
+            list-style: none;
+        }
+
+        nav li {
+            margin: 8px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #f4a261;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #2a9d8f;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #e76f51;
+            color: white;
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #d65a3a;
+        }
+
+        /* Main Section */
+        main {
+            padding: 40px 20px;
+        }
+
+        main h2 {
+            text-align: center;
+            color: #264653;
+            margin-bottom: 25px;
+        }
+
+        /* Cards */
+        .cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+        }
+
+        .card h3 {
+            color: #2a9d8f;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #264653;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* =========================
+           Tablet
+           ========================= */
+
+        @media screen and (min-width: 600px) {
+
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px 5%;
+            }
+
+            .logo {
+                margin-bottom: 0;
+            }
+
+            nav ul {
+                display: flex;
+                gap: 20px;
+            }
+
+            nav li {
+                margin: 0;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* =========================
+           Desktop
+           ========================= */
+
+        @media screen and (min-width: 900px) {
+
+            header {
+                padding: 20px 8%;
+            }
+
+            .hero {
+                padding: 100px 20px;
+            }
+
+            .hero h1 {
+                font-size: 50px;
+            }
+
+            main {
+                max-width: 1100px;
+                margin: auto;
+                padding: 60px 20px;
+            }
+
+            .cards {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <div class="logo">
+            My Website
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <h1>Welcome to My Website</h1>
+
+        <p>
+            A simple mobile-first responsive webpage.
+        </p>
+
+        <a href="#" class="btn">
+            Get Started
+        </a>
+
+    </section>
+
+    <!-- Main Content -->
+    <main>
+
+        <h2>Our Services</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Web Design</h3>
+                <p>
+                    Create attractive and user-friendly
+                    website designs.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Development</h3>
+                <p>
+                    Build responsive and modern websites
+                    using HTML and CSS.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Support</h3>
+                <p>
+                    Get reliable support and maintenance
+                    for your website.
+                </p>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 My Website. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

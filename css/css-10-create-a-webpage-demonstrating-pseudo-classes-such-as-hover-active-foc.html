@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pseudo-Classes</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        /* :hover */
+        .hover-button {
+            background-color: blue;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .hover-button:hover {
+            background-color: green;
+        }
+
+        /* :active */
+        .active-button {
+            background-color: orange;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .active-button:active {
+            background-color: red;
+            transform: scale(0.9);
+        }
+
+        /* :focus */
+        input {
+            padding: 12px;
+            width: 250px;
+            border: 2px solid gray;
+            border-radius: 5px;
+        }
+
+        input:focus {
+            border-color: blue;
+            outline: none;
+            background-color: #e6f2ff;
+        }
+
+        /* :visited */
+        a {
+            color: blue;
+            font-size: 18px;
+        }
+
+        a:visited {
+            color: purple;
+        }
+
+        .box {
+            background-color: white;
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 500px;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Pseudo-Classes</h1>
+
+    <div class="box">
+
+        <h2>:hover</h2>
+        <p>Move your mouse over the button.</p>
+        <button class="hover-button">Hover Me</button>
+
+        <h2>:active</h2>
+        <p>Click and hold the button.</p>
+        <button class="active-button">Click Me</button>
+
+        <h2>:focus</h2>
+        <p>Click inside the input box.</p>
+        <input type="text" placeholder="Enter your name">
+
+        <h2>:visited</h2>
+        <p>Click the link and then return to this page.</p>
+        <a href="https://www.google.com" target="_blank">
+            Visit Google
+        </a>
+
+    </div>
+
+</body>
+</html>
